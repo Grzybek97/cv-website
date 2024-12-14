@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li>
+                    <a href="about.html">O mnie</a>
+                    <ul class="submenu">
+                        <li><a href="hobby.html">Moje hobby</a></li>
+                        <li><a href="skills.html">Umiejętności</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Kontakt</h1>
+            <p>Jeśli chcesz się ze mną skontaktować, wypełnij poniższy formularz:</p>
+            <form class="contact-form" action="#" method="post" id="contact-form">
+                <label for="name">Imię:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" >
+                <label for="message">Wiadomość:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Wyślij</button>
+            </form>
+            <p id="form-message"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Michał Grzybowski</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

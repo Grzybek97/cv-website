@@ -1,0 +1,347 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+}
+
+.intro {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.skills {
+    padding: 1rem;
+    background: #f4f4f4;
+}
+
+/* Animacje */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-photo {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.menu a {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu a:hover {
+    transform: scale(1.1);
+}
+
+.contact-form button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Formatowanie tekstu */
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.highlight {
+    background-color: yellow;
+    color: black;
+}
+
+.large-text {
+    font-size: 2rem;
+}
+
+.small-text {
+    font-size: 0.8rem;
+}
+
+/* Stylizacja menu */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    background-color: #333;
+    padding: 0.5rem;
+    margin: 0;
+    justify-content: flex-start; /* Ustawienie pozycji menu na lewo */
+}
+
+.menu li {
+    position: relative; /* Pozycja względem elementów podrzędnych */
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem; /* Większe klikane obszary */
+    display: block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu a:hover {
+    background-color: #555;
+    transform: scale(1.05); /* Powiększenie przy najechaniu */
+}
+
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Podmenu zaczyna się tuż pod przyciskiem nadrzędnym */
+    left: 0;
+    display: none; /* Ukrywamy podmenu domyślnie */
+    background-color: #444;
+    margin: 0;
+    padding: 0.5rem;
+    width: max-content; /* Dopasowanie szerokości podmenu do zawartości */
+    z-index: 10; /* Aby uniknąć nakładania się innych elementów */
+}
+
+.menu li:hover .submenu {
+    display: block; /* Pokazujemy podmenu po najechaniu */
+}
+
+.submenu li {
+    margin: 0; /* Usunięcie marginesów między elementami podrzędnymi */
+}
+
+.submenu a {
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+    white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+}
+
+.submenu a:hover {
+    background-color: #555; /* Wyróżnienie po najechaniu */
+    transition: background-color 0.3s ease; /* Animacja przejścia */
+}
+
+/* Naprawa potencjalnych kolizji z menu */
+nav {
+    position: relative; /* Zapewnia, że menu i jego podmenu są w jednej "warstwie" */
+}
+
+.welcome a:hover {
+    color: #ddd;
+}
+
+/* Stylizacja formularza dodawania projektów */
+.add-project form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-project input, .add-project textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.add-project button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-project button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Stylizacja kart projektów */
+.project-card {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h2 {
+    margin-top: 0;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #0056b3;
+}
+
+/* Stylizacja sekcji O mnie */
+.about .profile {
+    display: flex; /* Flexbox dla układu */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    gap: 2rem; /* Odstęp między zdjęciem a tekstem */
+    padding: 1rem;
+}
+
+/* Stylizacja zdjęcia */
+.profile-photo {
+    max-width: 150px; /* Maksymalna szerokość: 150px */
+    height: auto; /* Zachowanie proporcji */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    object-fit: cover; /* Przycięcie i dopasowanie zdjęcia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień dla efektu 3D */
+}
+
+/* Stylizacja tekstu */
+.about p {
+    flex: 1; /* Tekst zajmuje resztę miejsca */
+    line-height: 1.6; /* Wyraźne odstępy między wierszami */
+}
+
+/* Tabela */
+table {
+    width: 40%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+/* Listy */
+ul, ol {
+    margin: 1rem;
+    padding-left: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 0.01rem;
+}
+
+/* Responsywność */
+/* Smartfony poniżej 400px */
+@media (max-width: 400px) {
+    .menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .profile-photo {
+        max-width: 100px;
+    }
+
+    .about .profile {
+        gap: 0.5rem;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills, .contact-form {
+        padding: 1rem;
+    }
+}
+
+/* Telefony komórkowe */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    .menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .intro {
+        padding: 1rem 0;
+    }
+    .about .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .profile-photo {
+        max-width: 120px;
+    }
+}
+
+/* Tablety */
+@media (max-width: 1024px) {
+    .menu {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .about .profile {
+        gap: 1rem;
+    }
+    .profile-photo {
+        max-width: 130px;
+    }
+}
+
+/* Komputery */
+@media (min-width: 1025px) {
+    .intro {
+        padding: 3rem 0;
+    }
+    .skills {
+        padding: 2rem;
+    }
+}

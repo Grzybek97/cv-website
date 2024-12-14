@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekty</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li>
+                    <a href="about.html">O mnie</a>
+                    <ul class="submenu">
+                        <li><a href="hobby.html">Moje hobby</a></li>
+                        <li><a href="skills.html">Umiejętności</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html">Projekty</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects">
+            <h1>Projekty</h1>
+            <div id="project-container" class="project-list"></div>
+        </section>
+
+        <section class="add-project">
+            <h2>Dodaj nowy projekt</h2>
+            <form id="add-project-form">
+                <label for="title">Tytuł projektu:</label>
+                <input type="text" id="title" name="title" placeholder="Wprowadź tytuł" required>
+
+                <label for="description">Opis projektu:</label>
+                <textarea id="description" name="description" placeholder="Wprowadź opis" required></textarea>
+
+                <label for="link">Link do projektu:</label>
+                <input type="file" id="file" name="file" required>
+
+                <button type="submit" class="button">Dodaj projekt</button>
+            </form>
+            <p id="form-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Michał Grzybowski 2024</p>
+    </footer>
+
+    <script src="js/projects.js"></script>
+</body>
+</html>
