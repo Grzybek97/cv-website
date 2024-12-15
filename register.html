@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Dodanie Font Awesome do ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Strona główna</a></li>
+                <li>
+                    <a href="about.html"><i class="fas fa-user"></i> O mnie</a>
+                    <ul class="submenu">
+                        <li><a href="hobby.html">Moje hobby</a></li>
+                        <li><a href="skills.html">Umiejętności</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projekty</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Kontakt</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Zaloguj</a></li>
+                <li><a href="register.html"><i class="fas fa-user-plus"></i> Zarejestruj</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="auth-section">
+            <h1>Rejestracja</h1>
+            <form id="register-form">
+                <div class="input-container">
+                    <input class="input" type="text" id="register-username" required placeholder=" " />
+                    <label class="label" for="register-username">Nazwa użytkownika</label>
+                </div>
+                <div class="input-container">
+                    <input class="input" type="password" id="registerpassword" required placeholder=" " />
+                    <label class="label" for="register-password">Hasło</label>
+                </div>
+                <button type="submit">Zarejestruj</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Michał Grzybowski</p>
+    </footer>
+    <script src="js/register.js"></script>
+</body>
+</html>

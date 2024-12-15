@@ -5,35 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Umiejętności</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Dodanie Font Awesome do ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
     <header>
         <nav>
             <ul class="menu">
-                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Strona główna</a></li>
                 <li>
-                    <a href="about.html">O mnie</a>
+                    <a href="about.html"><i class="fas fa-user"></i> O mnie</a>
                     <ul class="submenu">
                         <li><a href="hobby.html">Moje hobby</a></li>
                         <li><a href="skills.html">Umiejętności</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projekty</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Kontakt</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Zaloguj</a></li>
+                <li><a href="register.html"><i class="fas fa-user-plus"></i> Zarejestruj</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="skills">
             <h1>Umiejętności</h1>
             <p>Oto moje główne umiejętności:</p>
             <ol>
                 <li>Tworzenie stron internetowych (HTML5, CSS3, JavaScript)</li>
-                <li>Programowanie w języku C#, Python</li>
-                <li>Praca z bazami danych (SQL, MongoDB)</li>
-                <li>Rozwój aplikacji webowych w modelu RWD</li>
-                <li>Analiza danych i tworzenie raportów</li>
+                <li>Programowanie w języku C#, Python, Java, Go</li>
+                <li>Praca z bazami danych (SQL, Cassandra, DB2)</li>
+                <li>Analiza danych i tworzenie raportów (PowerBI, Kibana)</li>
+                <li>Programowanie w językach low-code (UiPath, Kofax, Power Apps)</li>
+                <li>Konfiguracja CI/CD (Jenkins, JFrog, Soteri, Atlassian)</li>
             </ol>
-            <img src="images/skills.jpg" alt="Zdjęcie związane z umiejętnościami" class="hero-image">
         </section>
     </main>
     <footer>
