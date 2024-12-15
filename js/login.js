@@ -17,6 +17,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
             const data = await response.json();
             localStorage.setItem("token", data.token);
             alert("Zalogowano pomyślnie!");
+            window.location.href = 'index.html';
         } else {
             alert("Nieprawidłowe dane logowania.");
         }

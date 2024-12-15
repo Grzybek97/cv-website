@@ -15,6 +15,7 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
 
         if (response.ok) {
             alert("Rejestracja zakończona pomyślnie. Możesz się zalogować.");
+            window.location.href = 'login.html';
         } else if (response.status === 409) {
             alert("Użytkownik o takiej nazwie już istnieje.");
         } else {
